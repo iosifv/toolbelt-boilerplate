@@ -1,12 +1,9 @@
-# This file is inspired from these examples:
-# https://github.com/BretFisher/php-docker-good-defaults/blob/master/Dockerfile
-# https://github.com/BretFisher/node-docker-good-defaults/blob/master/Dockerfile
 
 # Base image will be a clean ubuntu
 FROM ubuntu:latest
 
 # Set maintainer as myself
-LABEL author="iosif v"
+LABEL author="Iosif V."
 LABEL email="dev@iosifv.com"
 
 # Add arguments from CLI
@@ -74,3 +71,5 @@ RUN git clone git@github.com:iosifv/terminal-toolbelt.git && \
     echo "source /www/github/terminal-toolbelt/loader-docker.sh" >> ~/.zshrc
 
 WORKDIR /www
+
+RUN touch test1
